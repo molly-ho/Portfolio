@@ -1,0 +1,713 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Gnoli - Documentation</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="img/favicon.png">
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/prism.css">
+		<style>
+			body {
+				padding-top: 0px;
+				padding-bottom: 20px;
+				position: relative;
+			}
+			.docs h4{
+				text-transform: capitalize;
+				margin-top: 25px;
+			}
+			.docs h1{
+				text-transform: capitalize;
+				margin-top: 80px;
+			}
+			.docs h1:first-child{
+				margin-top: 40px;
+			}
+			#menus{
+				margin-top: 20px;
+			}
+			ul{
+				list-style: none;
+			}
+			a:focus{
+				outline: 0;
+				text-decoration: none;
+			}
+			.nav>li>a:hover, .nav>li>a:focus{
+				background: none;
+			}
+			#nav{margin-top: 20px;}
+			#nav.fixed{
+				position: fixed;
+				top: 0px;
+			}
+			.nav > li > a{
+				display: block;
+				text-transform: capitalize;
+				padding: 4px 20px;
+				color: #767676;
+			}
+			.nav > li > a:hover{
+				border-left: 2px solid #000;
+				padding-left: 18px;
+				background: none;
+			}
+			.nav ul > li > a{
+				display: block;
+				padding: 1px 30px;
+				text-transform: capitalize;
+				color: #767676;
+			}
+			.nav li.active a{
+			}
+			.nav > li.active > a{
+				border-left: 2px solid #000;
+				padding-left: 18px;
+				color: #000;
+			}
+			.nav ul li.active > a{
+				border-left: 2px solid #000;
+				padding-left: 28px;
+				color: #000;
+			}
+			.nav ul{
+				display: none;
+				margin: 0;
+				padding: 0
+			}
+			.nav>li.active ul{
+				display: block;
+			}
+			footer{
+				padding: 20px 0;
+				color: #787878;
+			}
+			.logo{
+				margin-top: 15px;
+			}
+			.help{
+				display: block;
+				float: right;
+				padding-top: 11px;
+			}
+			.help:hover{
+				color: #fff;
+			}
+
+		</style>
+	</head>
+
+
+	<body data-spy="scroll" data-target="#nav" data-offset="120">
+
+	<div class="jumbotron">
+		<div class="container">
+		<h1>Documentation</h1>
+		<p class="text-capitalize small">thank you for purchasing GNOLI theme <br>
+		for support use Envato <a href="http://themeforest.net/user/achtungthemes#contact">profile form</a></p>
+		</div>
+	</div>
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-9 docs">
+			<!-- PORTFOLIO -->
+				<h1 id="portfolio">portfolio</h1>
+				<hr>
+
+				<h4 id="portfolio_columns">portfolio columns</h4>
+				<p>Use <code>.col-2</code>, <code>.col-3</code>, <code>.col-4</code> classes to set column numbers</p>
+				<pre class="language-markup" data-line="4"><code>
+&lt;!-- PORTFOLIO-WRAPPER -->
+&lt;div class="portfolio-wrapper container">
+	&lt;!-- PORTFOLIO -->
+	&lt;div class="portfolio col-3">
+		...
+	&lt;/div>
+	&lt;!-- /PORTFOLIO -->
+&lt;/div>
+&lt;!-- /PORTFOLIO-WRAPPER -->				
+				</code></pre>
+
+
+				<h4 id="portfolio_item">portfolio item</h4>
+				<pre class="language-markup"><code>
+&lt;!-- PORTFOLIO ITEM -->
+&lt;div class="item">
+	&lt;a href="project-link.html" class="item-link">
+		&lt;div class="item-img" style="background-image: url('image-url.jpg')">&lt;/div>
+		&lt;div class="item-overlay">
+			&lt;h5>item title&lt;/h5>
+		&lt;/div>
+	&lt;/a>
+&lt;/div>
+&lt;!-- /PORTFOLIO ITEM -->					
+				</code></pre>
+			
+
+				<h4 id="item_sizes">item sizes</h4>
+				<p>Define portfolio item sizes with classes <code>.wide</code>, <code>.tall</code>, <code>.wide-tall</code></p>
+				<pre class="language-markup" data-line="2,7"><code>
+&lt;!-- PORTFOLIO ITEM -->
+&lt;div class="item">
+	...
+&lt;/div>
+&lt;!-- /PORTFOLIO ITEM -->	
+&lt;!-- PORTFOLIO ITEM -->
+&lt;div class="item tall">
+	...
+&lt;/div>
+&lt;!-- /PORTFOLIO ITEM -->		
+				</code></pre>
+
+				
+				<h4 id="spaces">space between items</h4>
+				<p>use <code>data-space</code> attribute to set gutter size</p>
+				<pre class="language-markup" data-line="4"><code>
+&lt;!-- PORTFOLIO-WRAPPER -->
+&lt;div class="portfolio-wrapper container">
+	&lt;!-- PORTFOLIO -->
+	&lt;div class="portfolio col-3" data-space="20">
+		...
+	&lt;/div>
+	&lt;!-- /PORTFOLIO -->
+&lt;/div>
+&lt;!-- /PORTFOLIO-WRAPPER -->				
+				</code></pre>
+
+				
+				<h4 id="portfolio_layout">fullwidth/boxed layout</h4>
+				<p>use <code>.container</code> class for boxed portfolio</p>
+				<pre class="language-markup" data-line="2"><code>
+&lt;!-- PORTFOLIO-WRAPPER -->
+&lt;div class="portfolio-wrapper container">
+	&lt;!-- PORTFOLIO -->
+	&lt;div class="portfolio col-3">
+		...
+	&lt;/div>
+	&lt;!-- /PORTFOLIO -->
+&lt;/div>
+&lt;!-- /PORTFOLIO-WRAPPER -->					
+				</code></pre>
+				<p>use <code>.fullwidth</code> class for fullwidth portfolio</p>
+				<pre class="language-markup" data-line="2"><code>
+&lt;!-- PORTFOLIO-WRAPPER -->
+&lt;div class="portfolio-wrapper fullwidth">
+	&lt;!-- PORTFOLIO -->
+	&lt;div class="portfolio col-3">
+		...
+	&lt;/div>
+	&lt;!-- /PORTFOLIO -->
+&lt;/div>
+&lt;!-- /PORTFOLIO-WRAPPER -->					
+				</code></pre>
+
+				
+				<h4 id="lightbox_item">lightbox item</h4>
+				<p>Add <code>.gallery-item</code> class and <strong>original image url</strong></p>
+				<pre class="language-markup" data-line="3"><code>
+&lt;!-- PORTFOLIO ITEM -->
+&lt;div class="item">
+	&lt;a href="original-full-image-url.jpg" class="gallery-item item-link">
+		&lt;div class="item-img" style="background-image: url('thumbnail.jpg')">&lt;/div>
+		&lt;div class="item-overlay">
+			&lt;h5>item title&lt;/h5>
+		&lt;/div>
+	&lt;/a>
+&lt;/div>
+&lt;!-- /PORTFOLIO ITEM -->
+				</code></pre>
+
+
+
+			<!-- /PORTFOLIO -->
+
+
+
+			<!-- FILTERS -->
+
+				<h1 id="filters">filters</h1>
+				<hr>
+
+				<h4 id="filter_buttons">filter buttons</h4>
+				<p>Add filters with <code>data-group</code> attribute</p>				
+				<pre class="language-markup"><code>
+&lt;div class="filter">
+	&lt;ul>
+		&lt;li data-group="all" class="active">all&lt;/li>
+		&lt;li data-group="photography">photography&lt;/li>
+		&lt;li data-group="branding">branding&lt;/li>
+		&lt;li data-group="design">design&lt;/li>
+	&lt;/ul>
+&lt;/div>
+				</code></pre>
+
+
+				<h4 id="item_category">portfolio item category</h4>
+				<p>For your portfolio items to assign category use <code>data-groups</code> attribute.</p>
+				<pre class="language-markup" data-line="2"><code>
+&lt;!-- PORTFOLIO ITEM -->
+&lt;div class="item" data-groups="branding">
+	...
+&lt;/div>
+&lt;!-- /PORTFOLIO ITEM -->				
+				</code></pre>
+				<p>You can assign multiple categories(comma separated without spaces)</p>
+				<pre class="language-markup" data-line="2"><code>
+&lt;!-- PORTFOLIO ITEM -->
+&lt;div class="item" data-groups="branding,design">
+	...
+&lt;/div>
+&lt;!-- /PORTFOLIO ITEM -->				
+				</code></pre>
+
+
+			<!-- FILTERS -->
+
+
+
+				<!-- ELEMENTS -->
+				<h1 id="elements">elements</h1>
+				<hr>
+
+				<h4 id="tabs">tabs</h4>
+				<p></p>
+				<pre class="language-markup"><code>
+&lt;!-- TABS -->
+&lt;div class="tabs">
+	&lt;!-- TAB NAVIGATION -->
+	&lt;ul class="tab-nav">
+		&lt;li data-tabpanel="#tabpanel1" class="active">Tab 1&lt;/li>
+		&lt;li data-tabpanel="#tabpanel2">Tab 2&lt;/li>
+		&lt;li data-tabpanel="#tabpanel3">Tab 3&lt;/li>
+	&lt;/ul>
+	&lt;!-- /TAB NAVIGATION -->
+	&lt;!-- TAB PANELS -->
+	&lt;div class="tab-panels">
+		&lt;div id="tabpanel1" class="active">
+			&lt;p>Lorem ipsum dolor sit amet&lt;/p>
+		&lt;/div>
+		&lt;div id="tabpanel2">
+			&lt;p>Lorem ipsum dolor sit amet&lt;/p>
+		&lt;/div>
+		&lt;div id="tabpanel3">
+			&lt;p>Lorem ipsum dolor sit amet&lt;/p>
+		&lt;/div>
+	&lt;/div>
+	&lt;!-- /TAB PANELS -->
+&lt;/div>
+&lt;!-- /TABS -->
+				</code></pre>
+
+				
+				<h4 id="toggles">toggles</h4>
+				<p></p>
+				<pre class="language-markup"><code>
+&lt;!-- TOGGLES -->
+&lt;div class="toggles">
+	&lt;div class="toggle active">
+		&lt;div class="toggle-title">toggle 1&lt;/div>
+		&lt;div class="toggle-content">
+			&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum consequuntur nostrum accusamus, iste accusantium, alias culpa&lt;/p>
+		&lt;/div>
+	&lt;/div>					
+	&lt;div class="toggle">
+		&lt;div class="toggle-title">toggle 2&lt;/div>
+		&lt;div class="toggle-content">
+			&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam illum fugiat dolores voluptatibus laborum distinctio. Inventore magni&lt;/p>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+&lt;!-- /TOGGLES -->
+				</code></pre>
+
+
+				
+				<h4 id="blockquote">blockquote</h4>
+				<p></p>
+				<pre class="language-markup"><code>
+&lt;!-- BLOCKQUOTE -->
+&lt;blockquote>
+	&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p>
+	&lt;footer>John Doe&lt;/footer>
+&lt;/blockquote>
+&lt;!-- /BLOCKQUOTE -->
+				</code></pre>
+				
+
+				
+				<h4 id="skill_bars">skill bars</h4>
+				<p>Set <code>data-perc</code> attributes</p>
+				<pre class="language-markup" data-line="4,8,12"><code>
+&lt;!-- SKILL BARS-->
+&lt;div class="skill">
+	&lt;h6 class="skill-title">skill I&lt;/h6>
+	&lt;div class="skill-bar" data-perc="75">&lt;span>75%&lt;/span>&lt;/div>
+&lt;/div>
+&lt;div class="skill">
+	&lt;h6 class="skill-title">skill II&lt;/h6>
+	&lt;div class="skill-bar" data-perc="72">&lt;span>72%&lt;/span>&lt;/div>
+&lt;/div>
+&lt;div class="skill">
+	&lt;h6 class="skill-title">skill III&lt;/h6>
+	&lt;div class="skill-bar" data-perc="65">&lt;span>65%&lt;/span>&lt;/div>
+&lt;/div>
+&lt;!-- /SKILL BARS -->
+				</code></pre>	
+				
+
+
+				
+				<h4 id="image_slider">image slider</h4>
+				<p></p>
+				<pre class="language-markup"><code>
+&lt;!-- IMAGE SLIDER -->
+&lt;div class="img-slider">
+	&lt;ul class="slides">
+		&lt;li>
+			&lt;img src="image1.jpg" alt="">
+		&lt;/li>
+		&lt;li>
+			&lt;img src="image2.jpg" alt="">
+		&lt;/li>
+		&lt;li>
+			&lt;img src="image3.jpg" alt="">
+		&lt;/li>
+	&lt;/ul>
+&lt;/div>
+&lt;!-- /IMAGE SLIDER -->
+				</code></pre>
+				
+
+
+				
+				<h4 id="icon_box">icon box</h4>
+				<p></p>
+				<pre class="language-markup"><code>
+&lt;!-- ICON BOX -->
+&lt;div class="icon-box">
+	&lt;!-- ICON -->
+	&lt;i class="pe-7s-speaker">&lt;/i>
+	&lt;!-- INFO -->
+	&lt;div class="box-details">
+		&lt;h4>ICON BOX TITLE&lt;/h4>
+		&lt;p class="separator">&lt;/p>
+		&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minus praesentium tempora nihil voluptatem totam repellat quod repellendus. Hic iste quidem.&lt;/p>
+	&lt;/div>
+&lt;/div>
+&lt;!-- /ICON BOX -->
+				</code></pre>
+				
+
+
+				
+				<h4 id="counters">counters</h4>
+				<p>Use <code>data-to</code> attribute - The number to stop counting at</p>
+				<pre class="language-markup" data-line="3"><code>
+&lt;!-- COUNTER ITEM -->
+&lt;div class="counter text-center">
+	&lt;h1 class="counter-num" data-to="57">&lt;/h1>
+	&lt;p class="spacer-small separator">&lt;/p>
+	&lt;h5>counter item title&lt;/h5>
+&lt;/div>	
+&lt;!-- /COUNTER ITEM -->
+				</code></pre>
+				
+
+
+				
+				<h4 id="buttons">buttons</h4>
+				<p></p>
+				<pre class="language-markup"><code>
+&lt;!-- BUTTON -->
+&lt;a href="#" class="button">BUTTON&lt;/a>
+
+&lt;!-- OUTLINE BUTTON -->
+&lt;a href="#" class="button outline">OUTLINE BUTTON&lt;/a>
+
+&lt;!-- LIGHT BUTTON -->
+&lt;a href="#" class="button light">LIGHT BUTTON&lt;/a>
+
+&lt;!-- LIGHT OUTLINE BUTTON -->
+&lt;a href="#" class="button outline light">LIGHT OUTLINE BUTTON&lt;/a>
+				</code></pre>
+
+
+
+				<!-- /ELEMENTS -->
+
+
+				<!-- SPACERS & SEPARATORS -->
+				<h1 id="spacers_separators">spacers & separators</h1>
+				<hr>
+
+				<h4>margins</h4>
+				<p>use <code>.mrg-{10, 20, ... 120}</code>, <code>.mrg-top-{10, 20, ... 120}</code>, <code>.mrg-btm-{10, 20, ... 120}</code> classes</p>
+				<pre class="language-markup"><code>
+&lt;!-- margin 20 px-->
+&lt;div class="mrg-20">&lt;/div>
+&lt;!-- margin top 70 px-->
+&lt;div class="mrg-top-70">&lt;/div>
+&lt;!-- margin bottom 120 px-->
+&lt;div class="mrg-btm-120">&lt;/div>
+				</code></pre>
+
+
+				<h4>paddings</h4>
+				<p>use <code>.pad-{10, 20, ... 120}</code>, <code>.pad-top-{10, 20, ... 120}</code>, <code>.pad-btm-{10, 20, ... 120}</code> classes</p>
+				<pre class="language-markup"><code>
+&lt;!-- padding 20 px-->
+&lt;div class="pad-20">&lt;/div>
+&lt;!-- padding top 70 px-->
+&lt;div class="pad-top-70">&lt;/div>
+&lt;!-- padding bottom 120 px-->
+&lt;div class="pad-btm-120">&lt;/div>
+				</code></pre>
+
+				<h4 id="separators">separators</h4>
+				<p>Use class <code>separator</code>, <code>separator-left</code> or <code>separator-right</code></p>
+				<pre class="language-markup"><code>
+&lt;!-- center separator -->
+&lt;p class="separator">&lt;/p>
+&lt;!-- left separator -->
+&lt;p class="separator-left">&lt;/p>
+&lt;!-- right separator -->
+&lt;p class="separator-right">&lt;/p>
+				</code></pre>		
+
+
+				<!-- /SPACERS & SEPARATORS -->
+
+
+				<!-- PARALLAX -->
+
+				<h1 id="parallax">parallax</h1>
+				<hr>
+				<p>For Parallax Backgrounds use <code>data-stellar-background-ratio=""</code>(background scroll speed) attribute</p>
+				<pre class="language-markup"><code>
+&lt;section style="background-image: url('image.jpg')" data-stellar-background-ratio="0.2">
+	...
+&lt;/section>	
+				</code></pre>				
+
+				<!-- /PARALLAX -->
+
+
+
+				<!-- OVERLAYS -->
+				<h1 id="overlays">overlays</h1>
+				<hr>
+				<pre class="language-markup"><code>
+&lt;!-- LIGHT OVERLAY -->
+&lt;div class="overlay overlay-light">&lt;/div>
+
+&lt;!-- DARK OVERLAY -->
+&lt;div class="overlay overlay-dark">&lt;/div>
+				</code></pre>
+				<p>To make overlay darker or brighter use <code>-2x</code>, <code>-3x</code>, <code>-4x</code> suffixes</p>
+				<pre class="language-markup"><code>
+&lt;div class="overlay overlay-dark-2x">&lt;/div>
+&lt;div class="overlay overlay-dark-3x">&lt;/div>
+&lt;div class="overlay overlay-dark-4x">&lt;/div>
+&lt;div class="overlay overlay-light-2x">&lt;/div>
+&lt;div class="overlay overlay-light-3x">&lt;/div>
+&lt;div class="overlay overlay-light-4x">&lt;/div>
+				</code></pre>
+				<p>Example:</p>
+				<pre class="language-markup" data-line="3"><code>
+&lt;section style="background-image: url('image.jpg')">
+
+	&lt;div class="overlay overlay-dark-2x">&lt;/div>
+
+	&lt;div class="text-light">
+		...
+	&lt;/div>
+
+&lt;/section>
+				</code></pre>
+
+				<!-- OVERLAYS -->
+
+
+
+
+				<!-- FONT ICONS -->
+				<h1 id="font_icons">font icons</h1>
+				<hr>
+				<h4 id="pixeden_font">pixeden font icons</h4>
+				<p>You can place Pixeden Font Icons using the CSS Prefix <code>pe-7s-</code> and the <a href="http://themes-pixeden.com/font-demos/7-stroke/index.html">icon's name</a>.</p>
+				<pre class="language-markup"><code>
+&lt;i class="pe-7s-photo">&lt;/i>
+				</code></pre>
+
+
+				
+				<h4 id="fontAwesome">fontAwesome</h4>
+				<p>CSS Prefix <code>fa</code> and the <a href="http://fortawesome.github.io/Font-Awesome/icons/">icon's name</a>.</p>
+				<pre class="language-markup"><code>
+&lt;i class="fa fa-photo">&lt;/i>
+				</code></pre>				
+
+
+				<!-- /FONT ICONS -->
+
+				<!-- RESPONSIVE VIDEOS -->
+				<h1 id="responsive_videos">responsive videos</h1>
+				<hr>
+				<p>Place Youtube or Vimeo videos inside <code>.video-container</code> element</p>
+				<pre class="language-markup"><code>
+&lt;div class="video-container">
+	&lt;iframe src="http://player.vimeo.com/video/26757344?title=0&amp;byline=0&amp;portrait=0">&lt;/iframe>
+&lt;/div>
+				</code></pre>
+				<!-- /RESPONSIVE VIDEOS -->
+
+
+
+				<!-- YOUTUBE BACKGROUNDS -->
+
+				<h1 id="youtube_backgrounds">youtube backgrounds</h1>
+				<hr>
+				<p>add <code>ytbg</code> class and <code>data-property</code> attribute, Set <code>videoURL</code></p>
+				<pre class="language-markup"><code>
+&lt;div class="ytbg" data-property="{videoURL:'https://www.youtube.com/watch?v=I5sJhSNUkwQ',containment:'self'}">
+	...
+&lt;/div>
+				</code></pre>				
+
+				<!-- /YOUTUBE BACKGROUNDS -->
+
+				<!-- SMOOTHSCROLL -->
+				<h1 id="smoothscroll">smoothscroll</h1>
+				<hr>
+				<p><code>a</code> element with <code>sscroll</code> class will scroll the page smoothly to the target element. Links must have resolvable id targets. For example</p>
+				<pre class="language-markup"><code>
+&lt;a href="#portfolio" class="sscroll button">&lt;/a>
+				</code></pre>
+				<!-- /SMOOTHSCROLL -->
+
+				<!-- CONTACT FORM -->
+
+				<h1 id="contact_form">contact form</h1>
+				<hr>
+				<p>Open <code>php/contact.php</code> file and change the following:  </p>
+				<p>Recipients E-mail address</p>
+				<pre class="language-php"><code>
+$to = "where@tosendemail.com";
+				</code></pre>	
+				<p>Subject Line</p>
+				<pre class="language-php"><code>
+$subject = 'Subject Line';
+				</code></pre>	
+
+				<!-- /CONTACT FORM -->
+
+
+				<!-- GOOGLE MAP -->
+
+				<h1 id="google_map">google map</h1>
+				<hr>
+				<p>Open <code>js/main.js</code> file and change options: </p>
+
+				<p><strong>line 381</strong></p>
+				<pre class="language-javascript"><code>
+var latitude = 51.5255069,
+	longitude = -0.0836207,
+				</code></pre>	
+
+				<!-- /GOOGLE MAP -->
+
+			</div>
+
+
+			<!-- NAVIGATION -->
+			<div class="col-md-3">
+				<nav id="nav" class="hidden-sm hidden-xs">
+					<ul class="nav">
+						<li><a href="#portfolio">portfolio</a>
+							<ul>
+								<li><a href="#portfolio_columns">Portfolio Columns</a></li>
+								<li><a href="#portfolio_item">Portfolio Item</a></li>
+								<li><a href="#item_sizes">Item Sizes</a></li>
+								<li><a href="#spaces">Space Between Items</a></li>
+								<li><a href="#portfolio_layout">Fullwidth/Boxed Layout</a></li>
+								<li><a href="#lightbox_item">Lightbox Item</a></li>
+							</ul>
+						</li>
+						<li><a href="#filters">filters</a>
+							<ul>
+								<li><a href="#filter_buttons">Filter Buttons</a></li>
+								<li><a href="#item_category">Portfolio Item Category</a></li>
+							</ul>
+						</li>
+						<li><a href="#elements">elements</a>
+							<ul>
+								<li><a href="#tabs">Tabs</a></li>
+								<li><a href="#toggles">Toggles</a></li>
+								<li><a href="#blockquote">blockquote</a></li>
+								<li><a href="#skill_bars">Skill Bars</a></li>
+								<li><a href="#image_slider">image slider</a></li>
+								<li><a href="#icon_box">icon box</a></li>
+								<li><a href="#counters">counters</a></li>
+								<li><a href="#buttons">buttons</a></li>
+							</ul>
+						</li>
+						<li><a href="#spacers_separators">Spacers & Separators</a></li>
+						<li><a href="#parallax">Parallax</a></li>
+						<li><a href="#overlays">Overlays</a></li>
+						<li><a href="#font_icons">Font Icons</a></li>
+						<li><a href="#responsive_videos">Responsive Videos</a></li>
+						<li><a href="#youtube_backgrounds">Youtube Backgrounds</a></li>
+						<li><a href="#smoothscroll">Smoothscroll</a></li>						
+						<li><a href="#contact_form">Contact Form</a></li>
+						<li><a href="#google_map">Google Map</a></li>
+					</ul>
+				</nav>
+			</div>	
+		</div>
+
+	</div> <!-- /container -->
+	<br>
+	<br>
+	<br>
+	<br>
+	<hr>
+	<footer class="text-center">
+		<p>2015 © AchtungThemes</p>
+	</footer>
+
+
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/prism.js"></script>
+		<script>
+			$(function () {
+				$('[data-toggle="tooltip"]').tooltip();
+
+				var nt = $('#nav').offset().top-20;
+				$(window).scroll(function () {
+					var st = $(window).scrollTop();
+					if( st >= nt ){
+						$('#nav').addClass('fixed');
+					}else{
+						$('#nav').removeClass('fixed');
+					}
+				});
+
+				$('#nav a').click(function () {
+					var ti = $(this).attr('href'),
+						tt = $(ti).offset().top-10;
+					$('html, body').animate({ scrollTop: tt }, 400);	
+					return false;
+				});
+			})
+		</script>
+	</body>
+</html>
